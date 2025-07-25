@@ -37,11 +37,29 @@
 // click, input, scroll, keydown, resize, mouseenter, mouseleave
 
 const start = document.querySelector('.start');
+const settingsBtn = document.querySelector('.settingsBtn');
+const back = document.querySelectorAll('.back');
+const menu = document.querySelector('.menu');
+const inGame = document.querySelector('.inGame');
 const settings = document.querySelector('.settings');
 
-start.addEventListener('click', starting);
+start.addEventListener('click', () => {openTab(inGame)});
 
-function starting() {
-    document.querySelector('.menu').style.display = 'none';
-    document.querySelector('.inGame').style.display = 'flex';
+settingsBtn.addEventListener('click', () => {openTab(settings)});
+
+back.forEach(btn => {
+    btn.addEventListener('click', backToMenu);
+});
+
+
+function backToMenu() {
+    inGame.style.display = 'none';
+    settings.style.display = 'none';
+    menu.style.display = 'flex';
+
+}
+
+function openTab(tabName) {
+    menu.style.display = 'none';
+    tabName.style.display = 'flex';
 }
