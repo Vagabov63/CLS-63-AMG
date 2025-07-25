@@ -1,0 +1,25 @@
+body{
+    background-color: #92e0ff;
+    display: grid;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    border: 1px solid;
+    width: 700px;
+    height: 70vh;
+
+}
+
+.menu{
+    display: flex;
+}
+
+.inGame{
+    display: none;
+}
+
