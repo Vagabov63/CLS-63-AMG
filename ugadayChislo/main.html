@@ -16,11 +16,30 @@
             <button class="back">Назад</button>
         </div>
         <div class="settings">
-            <h2>Настройки</h2>
-            <p>Здесь будут настройки игры.</p>
+            <h2>Настройки сложности игры</h2>
+            <input type="range" min="0" max="20" value="3" class="attemptsSlider">
+            <p>количество попыток: </p>
+            <button class="calc">расширенная версия</button>
+            <input class="attemptsMonitor" type="text" min="1" max="20" value="3">
+            <button class="clear">Очистить</button>
+            <div class="math">
+                <ul>
+                    <li><button data-symbol="√()">√</button></li>
+                    <li><button data-symbol="ln()">ln</button></li>
+                    <li><button data-symbol="π">π</button></li>
+                    <li><button data-symbol="log()">log</button></li>
+                    <li><button data-symbol="cos()">cos</button></li>
+                    <li><button data-symbol="sin()">sin</button></li>
+                    <li><button data-symbol="×">×</button></li>
+                    <li><button data-symbol="/">/</button></li>
+                    <li><button data-symbol="+">+</button></li>
+                    <li><button data-symbol="-">-</button></li>
+                </ul>
+            </div>
             <button class="back">Назад</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/settings.js"></script>
 </body>
 </html>
