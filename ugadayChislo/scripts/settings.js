@@ -4,8 +4,12 @@ const attemptsMonitor = document.querySelector('.attemptsMonitor');
 const calculator = document.querySelector('.calc');
 const mathButtons = document.querySelector('.math');
 const calcButtons = document.querySelectorAll('.math button');
-
-
+const range = document.querySelectorAll('.range input');
+const minSlider = document.querySelector('#min-slider');
+const maxSlider = document.querySelector('#max-slider');
+const maxRangeMonitor = document.querySelector('.maxRangeMonitor');
+const minRangeMonitor = document.querySelector('.minRangeMonitor');
+const clear = document.querySelectorAll('.clear');
 
 
 //включает продвинутый режим
@@ -70,6 +74,31 @@ attemptsMonitor.addEventListener('input', function() {
     if(isNaN(parseInt(maxAttempts))) {
         attemptsSlider.value = 0;
     }
-
 });
 
+//max, min
+let currentMax = 0;
+let currentMin = 0;
+minSlider.addEventListener('input', () => {
+    const currentMin = parseInt(minSlider.value);
+    const currentMax = parseInt(maxSlider.value);
+    
+    minRangeMonitor.value = Math.min(currentMin, currentMax);
+    maxRangeMonitor.value = Math.max(currentMin, currentMax);
+});
+
+maxSlider.addEventListener('input', () => {
+    const currentMin = parseInt(minSlider.value);
+    const currentMax = parseInt(maxSlider.value);
+    
+    minRangeMonitor.value = Math.min(currentMin, currentMax);
+    maxRangeMonitor.value = Math.max(currentMin, currentMax);
+});
+
+clear.forEach(button => {
+    button.addEventListener('click', () => {
+        attemptsMonitor.value = "";
+        attemptsSlider.value = 0;
+    });
+})
+    

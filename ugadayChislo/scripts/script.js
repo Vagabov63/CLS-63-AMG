@@ -3,7 +3,6 @@
 const start = document.querySelector('.start');
 const settingsBtn = document.querySelector('.settingsBtn');
 const back = document.querySelectorAll('.back');
-const clear = document.querySelectorAll('.clear');
 const menu = document.querySelector('.menu');
 const inGame = document.querySelector('.inGame');
 const settings = document.querySelector('.settings');
@@ -20,11 +19,6 @@ settingsBtn.addEventListener('click', () => openTab(settings));
 back.forEach(btn => {
     btn.addEventListener('click', backToMenu);
 });
-
-clear.addEventListener('click', () => {
-    
-})
-
 
 function backToMenu() {
     inGame.style.display = 'none';

@@ -1,36 +1,82 @@
-body{
-    background: linear-gradient(45deg, #00c6fb, #005bea);
-    display: grid;
-    height: 100vh;
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+body {
+  background: linear-gradient(45deg, #00c6fb, #005bea);
+  display: grid;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.main{
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 5px solid;
-    border-radius: 20px;
-    width: 700px;
-    height: 700px;
+.main {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 5px solid;
+  border-radius: 20px;
+  width: 700px;
+  height: 700px;
 
 }
 
-.menu{
-    display: flex;
+.menu {
+  display: flex;
 }
 
-.inGame{
-    display: none;
+.inGame {
+  display: none;
 }
 
-.settings{
-    display: none;
-    flex-direction: column;
-    align-items: center;
+.settings {
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
-.math{
-    display: none;
+.math {
+  display: none;
+}
+
+.math ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.range {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  margin: 30px 0;
+}
+
+.range-slider {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Стили для ползунков в Chrome/Safari */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Стили для ползунков в Firefox */
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border: none;
 }
